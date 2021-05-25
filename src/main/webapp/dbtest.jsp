@@ -7,17 +7,17 @@
 <title>Insert title here</title>
 </head>
 <body>
-<%@ page import=”java.sql.*”
+<%@ page import="java.sql.*"
 
          contentType=”text/html;charset=utf-8″%>
 
 <%
 
-         String DB_URL = “jdbc:mariadb://localhost:3306/scentmall”;
+         String DB_URL = "jdbc:mariadb://localhost:3306/scentmall";
 
-         String DB_USER = “root”;
+         String DB_USER = "root";
 
-         String DB_PASSWORD= “rVd4DUrcnKSY”;
+         String DB_PASSWORD= "rVd4DUrcnKSY";
 
          Connection conn;
 
@@ -25,7 +25,7 @@
 
          try {
 
-              Class.forName(“org.gjt.mm.mysql.Driver”);
+              Class.forName("org.gjt.mm.mysql.Driver");
 
               conn = DriverManager.getConnection(DB_URL, DB_USER, DB_PASSWORD);
 
@@ -33,7 +33,7 @@
 
               conn.close();
 
-              out.println(“MySQL Connection Success!”);
+              out.println("MySQL Connection Success!");
 
          }
 
