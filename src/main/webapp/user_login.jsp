@@ -1,13 +1,21 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%
-	String user_id = (String)request.getSession().getAttribute("uLogin");
+	String user_id = (String)session.getAttribute("uLogin");
+	
+	System.out.println("¼¼¼Ç¿¡ µî·ÏµÈ ¾ÆÀÌµğ " +user_id);
+	
+	if(user_id != null) {
+		RequestDispatcher dispatcher = request.getRequestDispatcher("/index.jsp");
+		dispatcher.forward(request, response);
+	}
 %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Scentmall</title>
+<meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
+<title>Addup »ç¿ëÀÚ ·Î±×ÀÎ</title>
 <style>
 html, body{
 	width:100%;
@@ -91,11 +99,11 @@ body > #wrap{
 	color:gray;
 	text-decoration:underline;
 }
+
 #container{
 	position:relative;
-	padding-bottom:440px;
+	padding-bottom:550px;
 	*zoom: 1;
-	
 }
 #container:after{
 	content:'';
@@ -103,14 +111,22 @@ body > #wrap{
 	clear:both;
 }
 #content{
-	display:block;
 	position:absolute;
-	left:150px;
-	padding:30px;
+	display:inline-block;
+	top:100px;
+	left:450px;
+	width:600px;
+	height:900px;
+	margin:0 auto;
 }
-#content img{
-	margin-left:90px;
-	width:1000px;
+#content form{
+	padding:120px;
+	width:250px;
+	margin:0 auto;
+}
+#content input{
+	margin-top:30px;
+	margin-bottom:10px;
 }
 #footer{
 	position:relative;
@@ -136,7 +152,24 @@ body > #wrap{
 	margin-left:38%;
 	font-family: 'Nanum Gothic', sans-serif;
 }
+
 </style>
+<script type="text/javascript">
+	function loginCheck() {
+		if(document.frm.id.value.length == 0) {
+			alert("¾ÆÀÌµğ¸¦ ÀÔ·ÂÇØÁÖ¼¼¿ä");
+			frm.id.focus();
+			return false;
+		}
+		if(document.frm.pw.value.length == 0) {
+			alert("ºñ¹Ğ¹øÈ£¸¦ ÀÔ·ÂÇØÁÖ¼¼¿ä");
+			frm.pw.focus();
+			return false;
+		}
+		
+		return true;
+	}
+</script>
 </head>
 <body>
 <div id="wrap">
@@ -150,7 +183,7 @@ body > #wrap{
 			<%
 				} else {
 			%>
-					<%= user_id %>ë‹˜ ë¡œê·¸ì¸
+					<%= user_id %>´Ô ·Î±×ÀÎ
 			<%
 				}
 			%>
@@ -170,11 +203,11 @@ body > #wrap{
 			</dl>
 			<dl class="category_shop">
 				<dt><a href="#">shop</a></dt>
-				<dd><a href="ControllerServlet?command=product_list&category=man">Man</a></dd>
-				<dd><a href="ControllerServlet?command=product_list&category=woman">Woman</a></dd>
-				<dd><a href="ControllerServlet?command=product_list2&category=perfume">Perfume</a></dd>
-				<dd><a href="ControllerServlet?command=product_list2&category=eaudeperfume">Eau de perfume</a></dd>
-				<dd><a href="ControllerServlet?command=product_list2&category=eaudecologne">Eau de cologne</a></dd>
+				<dd><a href="#">Man</a></dd>
+				<dd><a href="#">Woman</a></dd>
+				<dd><a href="#">Perfume</a></dd>
+				<dd><a href="#">Eau de perfume</a></dd>
+				<dd><a href="#">Eau de cologne</a></dd>
 				<dd><a href="#">Recommend</a></dd>
 			</dl>
 			<dl class="category_community">
@@ -185,13 +218,12 @@ body > #wrap{
 			</dl>
 		</div> <!-- mainnav -->
 		<div id="content">
-			<h1>
-				<img src="img/main_img.png"/>
-			</h1>
-			<h1>
-				<img src="img/main_img2.png"/>
-			</h1>
-			
+			<form name="frm" action="ControllerServlet?command=user_login" method="post">
+				¾ÆÀÌµğ&nbsp; &nbsp;&nbsp; &nbsp;<input type="text" name="id"><br>
+				ºñ¹Ğ¹øÈ£&nbsp; &nbsp;<input type="password" name="pw"><br>
+				<input type="submit" onclick="return loginCheck();"value="·Î±×ÀÎ" style="width:240px;">
+				<input type="button" style="width:240px" onclick="location.href='user_join.jsp'" value="È¸¿ø°¡ÀÔ">
+			</form>
 		</div>
 	</div> <!-- container -->
 </div> <!-- wrap -->
@@ -199,9 +231,9 @@ body > #wrap{
 <div id="footer">
 	<div class="footerArea">
 		<p class="copy">
-			&copy; Copyright Software Engineering Project <br>
-			&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Team 18 Parksungho, Hwangminha, Leewujin <br>
-			&nbsp; &nbsp; &nbsp; &nbsp;Contact us rkddkwl219@gmail.com
+			&copy; Copyright WebServer Programming Project <br>
+			&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Team 8 Sonminho, Leewujin <br>
+			&nbsp; &nbsp; &nbsp; &nbsp;Contact us smin2846@gmail.com
 		</p>
 	</div>
 </div>
