@@ -65,7 +65,7 @@
     <header>
       <div class="logo" align="center">
         <h1>
-          <a href="index.jsp">Scentmall</a>
+          <a href="/index.jsp">Scentmall</a>
         </h1>
       </div>
 

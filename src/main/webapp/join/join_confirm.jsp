@@ -3,6 +3,10 @@
 <%@ page import="java.sql.*"%>
 
 <%
+out.println("<script>alert('회원가입이 완료되었습니다!');"+ request.getParameter("id")+ "</script>");
+%>
+
+<%--
 		// db 연결 부분
          String DB_URL = "jdbc:mariadb://localhost:3306/scentmall";
 
@@ -62,4 +66,4 @@
 
          }
 
-%>
+--%>
