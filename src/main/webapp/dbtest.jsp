@@ -7,9 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-<%@ page import="java.sql.*"
-
-         contentType="text/html;charset=utf-8"%>
+<%@ page import="java.sql.*"%>
 
 <%
 
