@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%
- HttpSession session = request.getSession();
+ session = request.getSession();
 //로그인 상태면 경고문 띄우고 메인페이지로 보낸다.
 if(session.getAttribute("id"))
 {
