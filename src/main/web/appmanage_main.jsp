@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
-<title>Addup Çâ¼ö °ü¸®ÀÚ ÆäÀÌÁö</title>
+<title>Addup í–¥ìˆ˜ ê´€ë¦¬ìž íŽ˜ì´ì§€</title>
 <style>
 html, body{
 	width:100%;
@@ -175,7 +175,7 @@ body > #wrap{
 		</div>
 		
 		<div id="content">
-			<h1>°ü¸®ÀÚ ¸ÞÀÎ ÆäÀÌÁöÀÔ´Ï´Ù.</h1>
+			<h1>ê´€ë¦¬ìž ë©”ì¸ íŽ˜ì´ì§€ìž…ë‹ˆë‹¤.</h1>
 		</div>
 	</div>
 	<div id="footer">
