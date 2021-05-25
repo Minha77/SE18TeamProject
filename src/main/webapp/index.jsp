@@ -155,6 +155,7 @@ body > #wrap{
 				}
 			%>
 			</a></dd>
+			
 			<dd><a href="ControllerServlet?command=logout"><% if(user_id != null) %>log out</a></dd>
 			<dd><a href="#"><% if(user_id != null) %>my page</a></dd>
 			<dd><a href="#"><% if(user_id != null) %>cart</a></dd>
@@ -162,7 +163,7 @@ body > #wrap{
 			<dd><a href="manager_login.jsp"><% if(user_id==null) %>manager</a></dd>
 		</dl>
 	</div> <!-- header -->
-	
+	<dd><a href="/join/agreement.jsp">회원가입</a></dd>
 	<div id="container">
 		<div id="mainnav">
 			<dl class="category_about_us">
