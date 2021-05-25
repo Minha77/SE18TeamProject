@@ -1,20 +1,20 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%
- session = request.getSession();
+ HttpSession session = request.getSession();
 //로그인 상태면 경고문 띄우고 메인페이지로 보낸다.
-if(isset($_SESSION['id']))
+if(session.getAttribute("id"))
 {
-  echo "<script>alert('회원가입은 로그아웃 후 이용이 가능합니다.');</script>";
-  echo "<script>window.location='/happydog/index.php';</script>";
-  exit;
+  out.println("<script>alert('회원가입은 로그아웃 후 이용이 가능합니다.');</script>");
+  out.println("<script>window.location='index.php';</script>");
+  return;
 }
 //약관에 동의하지 않고 페이지로 넘어올 경우
-if(!isset($_POST['all_agree']))
+if(request.getParameter("all_agree") == null)
 {
-  echo "<script>alert('약관 동의 정보가 확인되지 않았습니다.');</script>";
-  echo "<script>window.location='/happydog/index.php';</script>";
-  exit;
+  out.println("<script>alert('약관 동의 정보가 확인되지 않았습니다.');</script>");
+  out.println("<script>window.location='index.php';</script>");
+  return;
 }
 %>
 
