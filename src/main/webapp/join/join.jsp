@@ -6,14 +6,14 @@
 if(session.getAttribute("id") != null)
 {
   out.println("<script>alert('회원가입은 로그아웃 후 이용이 가능합니다.');</script>");
-  out.println("<script>window.location='index.php';</script>");
+  out.println("<script>window.location='/index.jsp';</script>");
   return;
 }
 //약관에 동의하지 않고 페이지로 넘어올 경우
 if(request.getParameter("all_agree") == null)
 {
   out.println("<script>alert('약관 동의 정보가 확인되지 않았습니다.');</script>");
-  out.println("<script>window.location='index.php';</script>");
+  out.println("<script>window.location='/index.jsp';</script>");
   return;
 }
 %>
@@ -286,7 +286,7 @@ if(request.getParameter("all_agree") == null)
     <header>
     <div class="logo" align="center">
       <h1>
-        <a href="index.php">Scentmall</a>
+        <a href="/index.jsp">Scentmall</a>
       </h1>
     </div>
     </header>
