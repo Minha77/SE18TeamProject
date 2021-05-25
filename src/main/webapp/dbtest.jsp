@@ -23,7 +23,7 @@
 
          try {
 
-              Class.forName("org.gjt.mm.mysql.Driver");
+              Class.forName("org.mariadb.jdbc.Driver");
 
               conn = DriverManager.getConnection(DB_URL, DB_USER, DB_PASSWORD);
 
