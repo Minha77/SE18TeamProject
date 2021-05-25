@@ -3,7 +3,7 @@
 <%
  session = request.getSession();
 //로그인 상태면 경고문 띄우고 메인페이지로 보낸다.
-if(session.getAttribute("id"))
+if(session.getAttribute("id") != null)
 {
   out.println("<script>alert('회원가입은 로그아웃 후 이용이 가능합니다.');</script>");
   out.println("<script>window.location='index.php';</script>");
