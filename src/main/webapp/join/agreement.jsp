@@ -86,7 +86,7 @@
       <div class="agreebox">
         <h2>약관 동의</h2>
         <hr>
-        <form class="agree_form" id="agree_form" name="agree_form" action="join.php" method="post">
+        <form class="agree_form" id="agree_form" name="agree_form" action="join.jsp" method="post">
           <label>
             <input type="checkbox" name="all_agree" value="agree" onclick="all_check();" required>
             전체 동의
