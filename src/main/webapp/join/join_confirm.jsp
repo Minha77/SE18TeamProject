@@ -3,10 +3,6 @@
 <%@ page import="java.sql.*"%>
 
 <%
-out.println("<script>alert('회원가입이 완료되었습니다!');"+ request.getParameter("id")+ "</script>");
-%>
-
-<%--
 		// db 연결 부분
          String DB_URL = "jdbc:mariadb://localhost:3306/scentmall";
 
@@ -47,12 +43,12 @@ out.println("<script>alert('회원가입이 완료되었습니다!');"+ request.
             	  out.println("<script>alert('회원가입이 완료되었습니다!');</script>");
             	  stmt.executeUpdate(join_query);
             	  
-            	  //session 생성
-            	  session.setAttribute("id", request.getParameter("id"));
+            	  //session 생성 로그인 구현되면 이부분 로그인jsp파일로 넘기는 것으로 수정
+            	  session.setAttribute("id", request.getParameter("user_id"));
             	  session.setAttribute("idno", request.getParameter("idno"));
             	  session.setAttribute("isadmin", "0");
             	  session.setAttribute("name", request.getParameter("user_nickname"));
-            	  session.setAttribute("email", request.getParameter("email"));
+            	  session.setAttribute("email", request.getParameter("user_email"));
             	  
             	  out.println("<script>window.location='/index.jsp';</script>");
             	  
@@ -66,4 +62,4 @@ out.println("<script>alert('회원가입이 완료되었습니다!');"+ request.
 
          }
 
---%>
+%>
