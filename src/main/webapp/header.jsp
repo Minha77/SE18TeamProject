@@ -59,10 +59,10 @@
 
     </script>
     
-<nav class="navbar navbar-light bg-light">
-  <div class="container">
-  	<div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-	    <a class="navbar-brand" href="/index.jsp">
+<nav style="float:left; overflow:hidden;" width="70%" >
+  <div >
+  	<div>
+	    <a href="/index.jsp">
 	      <img src="/img/logo.jpg" width="200" height="70" class="d-inline-block align-text-top">
 	    </a>
 	    <form class="">
@@ -72,9 +72,8 @@
 	 </div>
   </div>
   <div align="center">
-  <div class="loginbox" align="left">
+  <div class="loginbox" style="float:left;" align="left">
     <form  name="loginform" action="login_check.php" method="post">
-      <h2>로그인</h2>
       <p>
         <input type="text" name="id" placeholder="아이디" class="edittext"
         onfocus="idcheck();" onblur="idcheck();">
@@ -89,20 +88,24 @@
       <p class="pw_no_value" style="color:red; display:none;">
          비밀번호를 입력해주세요.
       </p>
-
-<br><br><hr><br>
-
-      <p>
-        <button class="btn" type="button" onclick="sign();" >로그인</button>
-      </p>
-
-      <p>
-        <button class="btn" type="button" onclick="location.href='/join/agreement.jsp'">회원가입</button>
-      </p>
+      </div>
+      <div style="float:left;"><button class="btn" type="button" onclick="sign();" >로그인</button></div>
 
 
     </form>
   </div>
+        
+
+<br><br><hr><br>
+
+
+        
+
+
+      <p>
+        <button class="btn" type="button" onclick="location.href='/join/agreement.jsp'">회원가입</button>
+      </p>
+  
 </div>
    
 </nav>

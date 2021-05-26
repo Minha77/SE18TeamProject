@@ -149,8 +149,6 @@ body > #wrap{
 <!--header 끝-->
 
 <div id="wrap">
-	
-	<dd><a href="/join/agreement.jsp">회원가입</a></dd>
 	<div id="container">
 		<div id="mainnav">
 			<dl class="category_about_us">
