@@ -73,7 +73,13 @@
   </div>
   <div align="center">
   
-  <%if(user_id == null){ %>
+  <%
+  
+  
+	session = request.getSession();
+	String user_id = (String)session.getAttribute("id");
+
+  if(user_id == null){ %>
   <div class="loginbox" style="float:left;" align="left">
     <form  name="loginform" action="/login/login_check.jsp" method="post">
       <p>
@@ -109,7 +115,7 @@
       </p>
       
       <%}else{ %>
-      <p><%= id %>님 반갑습니다!</p>
+      <p><%= user_id %>님 반갑습니다!</p>
       
       <a class="nav-link" href="/login/logout.jsp">로그아웃</a>
       
