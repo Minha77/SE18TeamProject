@@ -149,7 +149,7 @@ body > #wrap{
 
 <div id="wrap">
 	
-	<dd><a href="/join/agreement.jsp">회원가입1</a></dd>
+	<dd><a href="/join/agreement.jsp">회원가입</a></dd>
 	<div id="container">
 		<div id="mainnav">
 			<dl class="category_about_us">
@@ -166,6 +166,9 @@ body > #wrap{
 			</dl>
 			<dl class="category_community">
 				<dt><a href="#">community</a></dt>
+			</dl>
+			<dl class="category_event">
+				<dt><a href="#">Event/Notice</a></dt>
 			</dl>
 			<dl class="category_qna">
 				<dt><a href="#">Q & A</a></dt>
