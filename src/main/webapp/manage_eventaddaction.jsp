@@ -167,7 +167,7 @@ body > #wrap{
 
 
 String uploadDir =this.getClass().getResource("").getPath();
-uploadDir = uploadDir.substring(1,uploadDir.indexOf(".metadata"))+"SW2021/WebContent/event_img";
+uploadDir = uploadDir.substring(1,uploadDir.indexOf(".metadata"))+"webapp/event_img";
 
 int maxSize = 1024 * 1024 * 100;
 String encoding = "UTF-8";
