@@ -109,7 +109,10 @@
       </p>
       
       <%}else{ %>
-      <%= id %>님 로그인
+      <p><%= id %>님 반갑습니다!</p>
+      <a class="nav-link" href="/login/logout.php">로그아웃</a>
+      
+      
       <%} %>
   
 </div>
