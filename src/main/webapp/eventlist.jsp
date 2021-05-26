@@ -6,7 +6,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
-<title>°øÁö»çÇ× ¸ñ·Ï</title>
+<title>ê³µì§€ì‚¬í•­ ëª©ë¡</title>
 <style>
 html, body{
 	width:100%;
@@ -178,7 +178,7 @@ body > #wrap{
 		</div>
 				
 		<div id="content">
-			<h2>ÀÌº¥Æ® / °øÁö»çÇ× ¸ñ·Ï</h2>
+			<h2>ì´ë²¤íŠ¸ / ê³µì§€ì‚¬í•­ ëª©ë¡</h2>
 			
 			<%
 int currentPage = 1;
@@ -189,9 +189,9 @@ if(request.getParameter("currentPage") != null) {
 int totalRowCount = 0;
 
 String ID ="root";
-String PWD ="asdf";
+String PWD ="rVd4DUrcnKSY";
 String PORTNO ="3306";
-String DBNAME="eventdb";
+String DBNAME="scentmall";
 String TIMEZONE ="serverTimezone=UTC";
 String Query ="jdbc:mysql://localhost:" + PORTNO +"/" + DBNAME +"?"+TIMEZONE;
 
@@ -211,7 +211,7 @@ try {
         totalRowCount = totalResultSet.getInt(1);
     }
 %>
-    <div>ÀüÃ¼ÇàÀÇ ¼ö : <%=totalRowCount%></div>
+    <div>ì „ì²´í–‰ì˜ ìˆ˜ : <%=totalRowCount%></div>
 <%    
     int pagePerRow = 10;
     String listSql = "SELECT event_number, event_name, event_startdate, event_enddate FROM event_table LIMIT ?,?";
@@ -252,13 +252,13 @@ try {
 <%
         if(currentPage>1) {
 %>
-            <a href="<%=request.getContextPath()%>/manage_eventlist.jsp?currentPage=<%=currentPage-1%>">ÀÌÀü</a>
+            <a href="<%=request.getContextPath()%>/manage_eventlist.jsp?currentPage=<%=currentPage-1%>">ì´ì „</a>
 <%
         }
         if(currentPage < lastPage) {
 %>
  
-            <a href="<%=request.getContextPath()%>/manage_eventlist.jsp?currentPage=<%=currentPage+1%>">´ÙÀ½</a>
+            <a href="<%=request.getContextPath()%>/manage_eventlist.jsp?currentPage=<%=currentPage+1%>">ë‹¤ìŒ</a>
 <%
         }
 %>
@@ -266,7 +266,7 @@ try {
 <%
 } catch(Exception e) {
     e.printStackTrace();
-    out.print("µ¥ÀÌÅÍ °¡Á®¿À±â ¿¡·¯!");
+    out.print("ë°ì´í„° ê°€ì ¸ì˜¤ê¸° ì—ëŸ¬!");
 } finally {
     try {totalResultSet.close();} catch(Exception e){}
     try {listResultSet.close();} catch(Exception e){}
