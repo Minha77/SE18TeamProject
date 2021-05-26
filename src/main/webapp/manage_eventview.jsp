@@ -187,7 +187,6 @@ if(request.getParameter("event_number") == null) {
 String ID ="root";
 String PWD ="rVd4DUrcnKSY";
 String Query ="jdbc:mariadb://localhost:3306/scentmall";
-	Connection conn = DriverManager.getConnection(Query, ID, PWD);
     Connection connection = null;
     PreparedStatement statement = null;
     ResultSet resultSet = null;
