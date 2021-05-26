@@ -1,11 +1,11 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=utf8"
+    pageEncoding="utf8"%>
 <%@ page import="dao.EventDAO, dto.EventVO, java.util.*" %>
 <%@ page import ="java.sql.*" %>
 <!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
+<meta http-equiv="Content-Type" content="text/html; charset=utf8">
 <title>공지사항 목록</title>
 <style>
 html, body{
@@ -202,6 +202,9 @@ ResultSet listResultSet = null;
 try {
     connection = DriverManager.getConnection(Query, ID, PWD);
     Class.forName("com.mysql.jdbc.Driver");
+    if(connection != null){
+	out.println("WebDB 데이터페이스로 연결했습니다. <br>");
+}
     String totalSql = "SELECT COUNT(*) FROM event_table";
     totalStatement = connection.prepareStatement(totalSql);
     totalResultSet = totalStatement.executeQuery();
