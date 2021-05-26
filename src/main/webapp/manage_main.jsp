@@ -162,6 +162,10 @@ body > #wrap{
 </head>
 
 <body>
+<!--header 시작-->
+<%@ include file="/header.jsp" %>
+<!--header 끝-->
+
 	<div id="header">
 		<h1 class="logo"><a href="index.jsp"><img src="img/logo.png"/></a></h1>	
 		<dl class="topnav">
