@@ -1,5 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=utf8"
-    pageEncoding="utf8"%>
+<%@ page language="java" pageEncoding="utf8"%>
 <%@ page import="dao.EventDAO, dto.EventVO, java.util.*" %>
 <%@ page import ="java.sql.*" %>
 <!DOCTYPE html>
