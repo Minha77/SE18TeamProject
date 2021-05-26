@@ -147,7 +147,7 @@ body > #wrap{
 </style>
 </head>
 <body>
-<h1>¿Ã∫•∆Æ ºˆ¡§</h1>
+<h1>Ïù¥Î≤§Ìä∏ ÏàòÏ†ï</h1>
 <div id="header">
 		<h1 class="logo"><a href="index.jsp"><img src="img/logo.png"/></a></h1>	
 		<dl class="topnav">
@@ -191,18 +191,16 @@ if(request.getParameter("event_number") == null) {
     String event_enddate = "";
     String event_banner = "";
     
-    String ID ="root";
-    String PWD ="asdf";
-    String PORTNO ="3306";
-    String DBNAME="eventdb";
-    String TIMEZONE ="serverTimezone=UTC";
-    String Query ="jdbc:mysql://localhost:" + PORTNO +"/" + DBNAME +"?"+TIMEZONE;
+String DB_URL = "jdbc:mariadb://localhost:3306/scentmall";
+String DB_USER = "root";
+String DB_PASSWORD= "rVd4DUrcnKSY";
+
     Connection connection = null;
     PreparedStatement statement = null;
     ResultSet resultSet = null;
     try {
-        Class.forName("com.mysql.jdbc.Driver");
-        connection = DriverManager.getConnection(Query, ID, PWD);
+        Class.forName("org.mariadb.jdbc.Driver");
+        connection = DriverManager.getConnection(DB_URL, DB_USER, DB_PASSWORD);
         String selectSql = "SELECT event_name, event_content, event_startdate,event_enddate,event_banner FROM event_table WHERE event_number=?";
         statement = connection.prepareStatement(selectSql);
         statement.setInt(1, event_number);
@@ -233,13 +231,13 @@ if(request.getParameter("event_number") == null) {
         <div> event_name : <input name="event_name" id="event_name" type="text" value="<%=event_name%>"/></div>
         <div>event_content : </div>
         <div><textarea name="event_content" id="event_content" rows="5" cols="50"><%=event_content%></textarea></div>
-        <div>¿Ã∫•∆Æ Ω√¿€¿œ : </div>
+        <div>Ïù¥Î≤§Ìä∏ ÏãúÏûëÏùº : </div>
     <div><p><input type="date" name="event_startdate" id="event_startdate" value="<%=event_startdate%>" min="2021-05-26" max="2099-12-31"></p></div>
-    <div>¿Ã∫•∆Æ ¡æ∑·¿œ : </div>
+    <div>Ïù¥Î≤§Ìä∏ Ï¢ÖÎ£åÏùº : </div>
     <div><p><input type="date" name="event_enddate" id="event_enddate" value="<%=event_enddate%>" min="2000-01-01" max="2099-12-31"></p></div>
         <div>
-            <input type="submit" value="±€ºˆ¡§"/>
-            <input type="reset" value="√ ±‚»≠"/>
+            <input type="submit" value="Í∏ÄÏàòÏ†ï"/>
+            <input type="reset" value="Ï¥àÍ∏∞Ìôî"/>
         </div>
     </form>
     </div>
