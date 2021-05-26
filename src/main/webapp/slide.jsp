@@ -1,24 +1,4 @@
-<div class="slide_area" onmouseover="pause();" onmouseout="resume();">
-  <div class="mySlides fade" style="display:none;">
-    <img src="/img/logo.jpg" style="width:100%; height:300px">
-  </div>
-  <div class="mySlides fade" style="display:none;">
-    <img src="/img/logo.jpg" style="width:100%; height:300px">
-  </div>
-  <div class="mySlides fade" style="display:none;">
-    <img src="/img/logo.jpg" style="width:100%; height:300px">
-  </div>
 
-  <a class="prev" onclick="minusSlides()">&#10094;</a>
-  <a class="next" onclick="plusSlides()">&#10095;</a>
-
-  <div class="dots" style="text-align:center;">
-    <span class="dot" onclick="currentSlide(0)"></span>
-    <span class="dot" onclick="currentSlide(1)"></span>
-    <span class="dot" onclick="currentSlide(2)"></span>
-  </div>
-
-</div>
 <%
 
 String ID ="root";
