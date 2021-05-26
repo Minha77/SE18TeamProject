@@ -1,4 +1,4 @@
-
+<%@ page import="java.sql.*"%>
 <%
 
 String ID ="root";
@@ -37,7 +37,7 @@ String Query ="jdbc:mariadb://localhost:3306/scentmall";
         try {statement.close();} catch(Exception e){}
         try {connection.close();} catch(Exception e){}
     }
-}
+
         
 %>
 </div>
