@@ -13,17 +13,14 @@ if(request.getParameter("event_number") == null) {
 } else {
     int event_number = Integer.parseInt(request.getParameter("event_number"));
     System.out.println("event_number :"+ event_number);
-    String ID ="root";
-    String PWD ="asdf";
-    String PORTNO ="3306";
-    String DBNAME="eventdb";
-    String TIMEZONE ="serverTimezone=UTC";
-    String Query ="jdbc:mysql://localhost:" + PORTNO +"/" + DBNAME +"?"+TIMEZONE;
+    String DB_URL = "jdbc:mariadb://localhost:3306/scentmall";
+    String DB_USER = "root";
+    String DB_PASSWORD= "rVd4DUrcnKSY";
     Connection connection = null;
     PreparedStatement statement = null;
     try {
-        Class.forName("com.mysql.jdbc.Driver");
-        connection = DriverManager.getConnection(Query, ID, PWD);
+        Class.forName("org.mariadb.jdbc.Driver");
+        connection = DriverManager.getConnection(DB_URL, DB_USER, DB_PASSWORD);
         String sql = "DELETE FROM event_table WHERE event_number=?";
         statement = connection.prepareStatement(sql);
         statement.setInt(1, event_number);
