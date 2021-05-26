@@ -20,7 +20,7 @@
       Class.forName("org.mariadb.jdbc.Driver");
 
       conn = DriverManager.getConnection(DB_URL, DB_USER, DB_PASSWORD);
-      String sql = "SELECT event_name, event_content, event_startdate, event_enddate, event_banner FROM event_table";
+      String sql = "SELECT event_name, event_content, event_startdate, event_enddate, event_banner FROM eventdb.event_table ";
 
       stmt = conn.createStatement();
       result = stmt.executeQuery(sql);
