@@ -1,30 +1,39 @@
 <%@ page import="java.sql.*"%>
 <%
 
-String ID ="root";
-String PWD ="rVd4DUrcnKSY";
-String Query ="jdbc:mariadb://localhost:3306/scentmall";
-	Connection conn = DriverManager.getConnection(Query, ID, PWD);
-    Connection connection = null;
-    PreparedStatement statement = null;
-    ResultSet resultSet = null;
-    try {
-        Class.forName("org.mariadb.jdbc.Driver");
-        connection = DriverManager.getConnection(Query, ID, PWD);
-        String sql = "SELECT event_name, event_content, event_startdate, event_enddate, event_banner FROM event_table";
-        statement = connection.prepareStatement(sql);
-        
-        resultSet = statement.executeQuery();
+
+// db 연결 부분
+ String DB_URL = "jdbc:mariadb://localhost:3306/scentmall";
+
+ String DB_USER = "root";
+
+ String DB_PASSWORD= "rVd4DUrcnKSY";
+
+ Connection conn;
+
+ Statement stmt;
+ 
+ ResultSet result;
+
+ try {
+
+      Class.forName("org.mariadb.jdbc.Driver");
+
+      conn = DriverManager.getConnection(DB_URL, DB_USER, DB_PASSWORD);
+      String sql = "SELECT event_name, event_content, event_startdate, event_enddate, event_banner FROM event_table";
+
+      stmt = conn.createStatement();
+      result = stmt.executeQuery(sql);
  %>
     <div class="slide_area" onmouseover="pause();" onmouseout="resume();">    
         
  <%
-        while(resultSet.next())
+        while(result.next())
         {
  %>
         	<div class="mySlides fade" style="display:none;">
-        	<a href="/eventview.jsp?event_number=<%=resultSet.getString("event_number")%>">
-    <img src="/event_img/<%=resultSet.getString("event_banner")%>" style="width:100%; height:300px"></a>
+        	<a href="/eventview.jsp?event_number=<%=result.getString("event_number")%>">
+    <img src="/event_img/<%=result.getString("event_banner")%>" style="width:100%; height:300px"></a>
   </div>
  <%
         }
@@ -33,9 +42,9 @@ String Query ="jdbc:mariadb://localhost:3306/scentmall";
         e.printStackTrace();
         out.println("BOARD VIEW ERROR!");
     } finally {
-        try {resultSet.close();} catch(Exception e){}
-        try {statement.close();} catch(Exception e){}
-        try {connection.close();} catch(Exception e){}
+        try {result.close();} catch(Exception e){}
+        try {stmt.close();} catch(Exception e){}
+        try {conn.close();} catch(Exception e){}
     }
 
         
