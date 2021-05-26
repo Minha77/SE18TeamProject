@@ -1,4 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=utf8" pageEncoding="utf8"%>
+<%@ page language="java" pageEncoding="utf8"%>
 <% request.setCharacterEncoding("utf8"); %>
 <%@ page import="java.sql.*" %>
 <%@ page import="com.oreilly.servlet.MultipartRequest" %>
@@ -7,7 +7,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf8">
 <title>event edit page</title>
 <style>
 html, body{
@@ -148,13 +147,9 @@ body > #wrap{
 </head>
 <body>
 <h1>이벤트 수정</h1>
-<div id="header">
-		<h1 class="logo"><a href="index.jsp"><img src="img/logo.png"/></a></h1>	
-		<dl class="topnav">
-			<dd><a href="ControllerServlet?command=logout">logout</a></dd>
-			<dd><a href="manager_login.jsp">manager</a></dd>
-		</dl>
-	</div>
+<!--header 시작-->
+<%@ include file="/header.jsp" %>
+<!--header 끝-->
 	<div id="container">
 		<div id="mainnav">
 		<dl class="category_about_us">
