@@ -63,7 +63,7 @@
   <div class="container">
   	<div class="collapse navbar-collapse" id="navbarTogglerDemo01">
 	    <a class="navbar-brand" href="/index.jsp">
-	      <img src="/scentmall/img/logo.jpg" alt="" width="100" height="50" class="d-inline-block align-text-top">
+	      <img src="/img/logo.jpg" alt="" width="100" height="50" class="d-inline-block align-text-top">
 	    </a>
 	    <form class="">
 	        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">

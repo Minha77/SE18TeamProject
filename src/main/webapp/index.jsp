@@ -148,29 +148,7 @@ body > #wrap{
 <!--header 끝-->
 
 <div id="wrap">
-	<div id="header">
-		<h1 class="logo"><a href="index.jsp"><img src="/img/logo.jpg"/></a></h1>	
-		<dl class="topnav">
-			<dd><a href="user_login.jsp">
-			<%
-				if(user_id == null) {
-			%>		login
-			<%
-				} else {
-			%>
-					<%= user_id %>님 로그인
-			<%
-				}
-			%>
-			</a></dd>
-			
-			<dd><a href="ControllerServlet?command=logout"><% if(user_id != null) %>log out</a></dd>
-			<dd><a href="#"><% if(user_id != null) %>my page</a></dd>
-			<dd><a href="#"><% if(user_id != null) %>cart</a></dd>
-			<dd><a href="ControllerServlet?command=user_order_list"><% if(user_id != null) %>order</a></dd>
-			<dd><a href="manager_login.jsp"><% if(user_id==null) %>manager</a></dd>
-		</dl>
-	</div> <!-- header -->
+	
 	<dd><a href="/join/agreement.jsp">회원가입</a></dd>
 	<div id="container">
 		<div id="mainnav">
