@@ -145,6 +145,10 @@ body > #wrap{
 <%@ include file="/header.jsp" %>
 <!--header 끝-->
 
+<!--slide 시작-->
+<%@ include file="/slide.jsp" %>
+<!--slide 끝-->
+
 <div id="wrap">
 	<div id="container">
 		<div id="mainnav">
