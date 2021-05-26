@@ -109,9 +109,9 @@
       </p>
       
       <%}else{ %>
-      <p><% id %>님 반갑습니다!</p>
+      <p><%= id %>님 반갑습니다!</p>
       
-      <a class="nav-link" href="/login/logout.php">로그아웃</a>
+      <a class="nav-link" href="/login/logout.jsp">로그아웃</a>
       
       <%} %>
   
