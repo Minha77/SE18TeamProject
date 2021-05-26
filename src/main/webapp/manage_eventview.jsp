@@ -212,7 +212,7 @@ String Query ="jdbc:mariadb://localhost:3306/scentmall";
             </tr>
             <tr>
             <th>board_content :</th> <td><%=resultSet.getString("event_content")%></td></tr>
-            <tr><th>board_img :</th> <td><%=resultSet.getString("event_banner")%><img src="/opt/bitnami/tomcat/webapps/ROOT/SE_Project_Team18/src/main/webapp/event_img/event_banner/"<%=resultSet.getString("event_banner")%>></td></tr>
+            <tr><th>board_img :</th> <td><%=resultSet.getString("event_banner")%><img src="/opt/bitnami/tomcat/webapps/ROOT/SE_Project_Team18/src/main/webapp/event_img/event_banner/<%=resultSet.getString("event_banner")%>"></td></tr>
             <tr>
             <th>board_startdate :</th> <td><%=resultSet.getString("event_startdate")%></td></tr>
             <tr>
