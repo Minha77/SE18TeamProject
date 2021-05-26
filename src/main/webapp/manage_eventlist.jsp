@@ -6,7 +6,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf8">
-<title>Addup 향수 관리자 공지사항 목록 페이지</title>
+<title>관리자 공지사항 목록</title>
 <style>
 html, body{
 	width:100%;
