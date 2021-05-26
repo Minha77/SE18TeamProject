@@ -5,7 +5,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf8">
 <title>관리자 공지사항 목록</title>
 <style>
 html, body{
@@ -145,7 +144,7 @@ body > #wrap{
 </style>
 </head>
 <body>
-	<!--header 시작-->
+<!--header 시작-->
 <%@ include file="/header.jsp" %>
 <!--header 끝-->
 	<div id="container">
