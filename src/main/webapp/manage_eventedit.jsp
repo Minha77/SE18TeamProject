@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR" pageEncoding="EUC-KR"%>
-<% request.setCharacterEncoding("utf-8"); %>
+<%@ page language="java" contentType="text/html; charset=utf8" pageEncoding="utf8"%>
+<% request.setCharacterEncoding("utf8"); %>
 <%@ page import="java.sql.*" %>
 <%@ page import="com.oreilly.servlet.MultipartRequest" %>
 <%@ page import="com.oreilly.servlet.multipart.DefaultFileRenamePolicy" %>
@@ -7,7 +7,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
+<meta http-equiv="Content-Type" content="text/html; charset=utf8">
 <title>event edit page</title>
 <style>
 html, body{
