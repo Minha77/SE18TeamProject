@@ -6,6 +6,7 @@
 <head>
 <script src="/js/bootstrap.bundle.js"></script>
 <link rel="stylesheet" href="/css/bootstrap.css">
+<link rel="stylesheet" href="/css/scentmall.css">
  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="/js/scentmall.js"></script>
 <title>Scentmall</title>
