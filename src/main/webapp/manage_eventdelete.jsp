@@ -3,7 +3,7 @@
 <html>
 <head>
 <title>event delete</title>
-
+<style>
 html, body{
 	width:100%;
 	height:100%;
