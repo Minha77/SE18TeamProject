@@ -1,11 +1,9 @@
-<%@ page language="java" contentType="text/html; charset=utf8"
-    pageEncoding="utf8"%>
+<%@ page language="java" pageEncoding="utf8"%>
 <%@ page import="dao.EventDAO, dto.EventVO, java.util.*" %>
 <%@ page import ="java.sql.*" %>
 <!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf8">
 <title>공지사항 목록</title>
 <style>
 html, body{
@@ -145,14 +143,9 @@ body > #wrap{
 </style>
 </head>
 <body>
-
-	<div id="header">
-		<h1 class="logo"><a href="index.jsp"><img src="img/logo.png"/></a></h1>	
-		<dl class="topnav">
-			<dd><a href="ControllerServlet?command=logout">logout</a></dd>
-			<dd><a href="manager_login.jsp">manager</a></dd>
-		</dl>
-	</div>
+<!--header 시작-->
+<%@ include file="/header.jsp" %>
+<!--header 끝-->
 	<div id="container">
 		<div id="mainnav">
 		<dl class="category_about_us">
@@ -276,14 +269,8 @@ try {
 }
 %>
 	</div>
-		<div id="footer">
-	<div class="footerArea">
-		<p class="copy">
-			&copy; Copyright Software Engineering Project <br>
-			&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Team 18 Parksungho, Hwangminha, Leewujin <br>
-			&nbsp; &nbsp; &nbsp; &nbsp;Contact us rkddkwl219@gmail.com
-		</p>
-	</div>
-	</div>
+<!--footer 시작-->
+<%@ include file="/footer.jsp" %>
+<!--footer 끝-->
 </body>
 </html>
