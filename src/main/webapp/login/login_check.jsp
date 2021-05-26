@@ -5,7 +5,7 @@
 <%
 		//이미 로그인 중이면 홈으로 돌려보냄
         session = request.getSession();
-		String user_id = session.getAttribute("user_id");
+		String user_id = (String)session.getAttribute("user_id");
 
 		if(user_id != null) 
 		{
