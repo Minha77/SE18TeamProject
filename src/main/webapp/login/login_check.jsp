@@ -56,8 +56,8 @@
 	            		  session.setAttribute("id", result.getString("id"));
 		            	  session.setAttribute("idno", result.getString("idno"));
 		            	  session.setAttribute("isadmin", result.getString("isadmin"));
-		            	  session.setAttribute("name", result.getString("user_nickname"));
-		            	  session.setAttribute("email", result.getString("user_email"));
+		            	  session.setAttribute("name", result.getString("name"));
+		            	  session.setAttribute("email", result.getString("email"));
 		            	  
 		            	  //관리자 아이디일 경우 관리자 메인페이지로 보냄
 		            	  if(result.getString("isadmin").equals("0"))
