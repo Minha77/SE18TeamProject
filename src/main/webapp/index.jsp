@@ -149,7 +149,7 @@ body > #wrap{
 
 <div id="wrap">
 	
-	<dd><a href="/join/agreement.jsp">회원가입</a></dd>
+	<dd><a href="/join/agreement.jsp">회원가입1</a></dd>
 	<div id="container">
 		<div id="mainnav">
 			<dl class="category_about_us">
