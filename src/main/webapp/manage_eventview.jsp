@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
-<title>¿Ã∫•∆Æ ªÛºº ¡§∫∏</title>
+<title>Ïù¥Î≤§Ìä∏ ÏÉÅÏÑ∏ Ï†ïÎ≥¥</title>
 <style>
 html, body{
 	width:100%;
@@ -158,8 +158,8 @@ body > #wrap{
 				</dl>
 			<dl class="Event_Noitce">
 				<dt><a href="#">Event/Notice</a></dt>
-				<dd><a href="ControllerServlet?command=manage_eventlist">Event/Notice List</a></dd>
-				<dd><a href="ControllerServlet?command=manage_eventadd">Event/Notice Register</a></dd>
+				<dd><a href="<%=request.getContextPath()%>/manage_eventlist.jsp">Event/Notice List</a></dd>
+				<dd><a href="<%=request.getContextPath()%>/manage_eventadd.jsp">Event/Notice Register</a></dd>
 			</dl>
 			<dl class="category_shop">
 				<dt><a href="#">Product</a></dt>
@@ -183,18 +183,16 @@ if(request.getParameter("event_number") == null) {
 } else {
 	int event_number = Integer.parseInt(request.getParameter("event_number"));
     System.out.println("event_number :"+event_number);
-	String ID ="root";
-	String PWD ="asdf";
-	String PORTNO ="3306";
-	String DBNAME="eventdb";
-	String TIMEZONE ="serverTimezone=UTC";
-	String Query ="jdbc:mysql://localhost:" + PORTNO +"/" + DBNAME +"?"+TIMEZONE;
+
+String ID ="root";
+String PWD ="rVd4DUrcnKSY";
+String Query ="jdbc:mariadb://localhost:3306/scentmall";
 	Connection conn = DriverManager.getConnection(Query, ID, PWD);
     Connection connection = null;
     PreparedStatement statement = null;
     ResultSet resultSet = null;
     try {
-        Class.forName("com.mysql.jdbc.Driver");
+        Class.forName("org.mariadb.jdbc.Driver");
         connection = DriverManager.getConnection(Query, ID, PWD);
         String sql = "SELECT event_name, event_content, event_startdate, event_enddate, event_banner FROM event_table WHERE event_number=?";
         statement = connection.prepareStatement(sql);
@@ -220,8 +218,8 @@ if(request.getParameter("event_number") == null) {
             <tr>
             <th>board_enddate :</th> <td><%=resultSet.getString("event_enddate")%></td></tr>
                	<tr>
-               	<td><a href="<%=request.getContextPath()%>/manage_eventedit.jsp?event_number=<%=event_number%>">ºˆ¡§</a></td>
-                <td><a href="<%=request.getContextPath()%>/manage_eventdelete.jsp?event_number=<%=event_number%>">ªË¡¶</a></td>
+               	<td><a href="<%=request.getContextPath()%>/manage_eventedit.jsp?event_number=<%=event_number%>">ÏàòÏ†ï</a></td>
+                <td><a href="<%=request.getContextPath()%>/manage_eventdelete.jsp?event_number=<%=event_number%>">ÏÇ≠Ï†ú</a></td>
             </tr>
             </table>
 <%
