@@ -146,9 +146,7 @@ body > #wrap{
 <%@ include file="/header.jsp" %>
 <!--header 끝-->
 
-<!--slide 시작-->
-<%@ include file="/slide.jsp" %>
-<!--slide 끝-->
+
 
 <div id="wrap">
 	<div id="container">
@@ -176,6 +174,9 @@ body > #wrap{
 			</dl>
 		</div> <!-- mainnav -->
 		<div id="content">
+			<!--slide 시작-->
+			<%@ include file="/slide.jsp" %>
+			<!--slide 끝-->
 			<h1>
 				<img src="img/main_img.png"/>
 			</h1>

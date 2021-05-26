@@ -19,9 +19,48 @@
   </div>
 
 </div>
-<br>
+<%
 
-
+String ID ="root";
+String PWD ="rVd4DUrcnKSY";
+String Query ="jdbc:mariadb://localhost:3306/scentmall";
+	Connection conn = DriverManager.getConnection(Query, ID, PWD);
+    Connection connection = null;
+    PreparedStatement statement = null;
+    ResultSet resultSet = null;
+    try {
+        Class.forName("org.mariadb.jdbc.Driver");
+        connection = DriverManager.getConnection(Query, ID, PWD);
+        String sql = "SELECT event_name, event_content, event_startdate, event_enddate, event_banner FROM event_table";
+        statement = connection.prepareStatement(sql);
+        
+        resultSet = statement.executeQuery();
+ %>
+    <div class="slide_area" onmouseover="pause();" onmouseout="resume();">    
+        
+ <%
+        while(resultSet.next())
+        {
+ %>
+        	<div class="mySlides fade" style="display:none;">
+        	<a href="/eventview.jsp?event_number=<%=resultSet.getString("event_number")%>">
+    <img src="/event_img/<%=resultSet.getString("event_banner")%>" style="width:100%; height:300px"></a>
+  </div>
+ <%
+        }
+        
+    }catch(Exception e) {
+        e.printStackTrace();
+        out.println("BOARD VIEW ERROR!");
+    } finally {
+        try {resultSet.close();} catch(Exception e){}
+        try {statement.close();} catch(Exception e){}
+        try {connection.close();} catch(Exception e){}
+    }
+}
+        
+%>
+</div>
 <script>
 
 
