@@ -24,7 +24,7 @@
 
               stmt = conn.createStatement();
 				
-              //입력받은 id와 email 값과 db에 있는 값을 비교해서 같은 같이 있으면 중복이므로 회원가입 실패 -> 메인화면으로 돌려보낸다
+              //입력받은 id와 email 값과 db에 있는 값을 비교해서 같은 같이 있으면 중복이므로 회원가입 실패 -> 메인화면으로 돌려보낸다selse
 			  String query = "SELECT idno FROM user WHERE id = '" + request.getParameter("user_id") + "' OR email = '" + request.getParameter("user_email") + "'";
 			  
 			  result = stmt.executeQuery(query);

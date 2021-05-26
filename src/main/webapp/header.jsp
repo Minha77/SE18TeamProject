@@ -59,7 +59,7 @@
 
     </script>
     
-<nav style="float:left; overflow:hidden;" width="70%" >
+<nav  width="70%" >
   <div >
   	<div>
 	    <a href="/index.jsp">
@@ -73,7 +73,7 @@
   </div>
   <div align="center">
   <div class="loginbox" style="float:left;" align="left">
-    <form  name="loginform" action="login_check.php" method="post">
+    <form  name="loginform" action="/login/login_check.php" method="post">
       <p>
         <input type="text" name="id" placeholder="아이디" class="edittext"
         onfocus="idcheck();" onblur="idcheck();">
