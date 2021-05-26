@@ -147,26 +147,27 @@ body > #wrap{
 <%@ include file="/header.jsp" %>
 <!--header 끝-->
 	<div id="container">
-		<div id="mainnav">
-		<dl class="category_about_us">
+	<div id="mainnav">
+			<dl class="category_about_us">
 				<dt><a href="#">about us</a></dt>
-				</dl>
-			<dl class="Event_Noitce">
-				<dt><a href="#">Event/Notice</a></dt>
-				<dd><a href="<%=request.getContextPath()%>/eventlist.jsp">Event/Notice List</a></dd>
 			</dl>
 			<dl class="category_shop">
-				<dt><a href="#">Product</a></dt>
-				<dd><a href="ControllerServlet?command=manager_register">Product Register</a></dd>
-				<dd><a href="ControllerServlet?command=manager_list">Product List</a></dd>
-				<dd><a href="ControllerServlet?command=manager_order_list">Product order</a></dd>
-				<dd><a href="#">Product Q & A</a></dd>
+				<dt><a href="#">shop</a></dt>
+				<dd><a href="ControllerServlet?command=product_list&category=man">Man</a></dd>
+				<dd><a href="ControllerServlet?command=product_list&category=woman">Woman</a></dd>
+				<dd><a href="ControllerServlet?command=product_list2&category=perfume">Perfume</a></dd>
+				<dd><a href="ControllerServlet?command=product_list2&category=eaudeperfume">Eau de perfume</a></dd>
+				<dd><a href="ControllerServlet?command=product_list2&category=eaudecologne">Eau de cologne</a></dd>
+				<dd><a href="#">Recommend</a></dd>
 			</dl>
-			<dl class="community">
-				<dt><a href="#">Community</a>
+			<dl class="category_community">
+				<dt><a href="#">community</a></dt>
 			</dl>
-			<dl>
-				<dt><a href="">logout</a></dt>
+			<dl class="category_event">
+				<dt><a href="<%=request.getContextPath()%>/eventlist.jsp">Event/Notice</a></dt>
+			</dl>
+			<dl class="category_qna">
+				<dt><a href="#">Q & A</a></dt>
 			</dl>
 		</div>
 				
