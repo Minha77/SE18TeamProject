@@ -1,9 +1,9 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR" pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=utf8" pageEncoding="utf8"%>
 <%@ page import="java.sql.*" %>
 <!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
+<meta http-equiv="Content-Type" content="text/html; charset=utf8">
 <title>이벤트 상세 정보</title>
 <style>
 html, body{
@@ -212,7 +212,7 @@ String Query ="jdbc:mariadb://localhost:3306/scentmall";
             </tr>
             <tr>
             <th>board_content :</th> <td><%=resultSet.getString("event_content")%></td></tr>
-            <tr><th>board_img :</th> <td><%=resultSet.getString("event_banner")%><img src="event_img\event_banner"></td></tr>
+            <tr><th>board_img :</th> <td><%=resultSet.getString("event_banner")%><img src="/opt/bitnami/tomcat/webapps/ROOT/SE_Project_Team18/src/main/webapp/event_img/event_banner"></td></tr>
             <tr>
             <th>board_startdate :</th> <td><%=resultSet.getString("event_startdate")%></td></tr>
             <tr>
