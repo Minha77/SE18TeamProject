@@ -186,17 +186,14 @@ String event_enddate = multipartRequest.getParameter("event_enddate");
 System.out.println("param event_startdate:"+ event_enddate);
 System.out.println("param event_startdate : " + event_banner);
 
-String ID ="root";
-String PWD ="asdf";
-String PORTNO ="3306";
-String DBNAME="eventdb";
-String TIMEZONE ="serverTimezone=UTC";
-String Query ="jdbc:mysql://localhost:" + PORTNO +"/" + DBNAME +"?"+TIMEZONE;
+String DB_URL = "jdbc:mariadb://localhost:3306/scentmall";
+String DB_USER = "root";
+String DB_PASSWORD= "rVd4DUrcnKSY";
 Connection connection = null;
 PreparedStatement statement = null;
 try {
-    Class.forName("com.mysql.jdbc.Driver");
-    connection = DriverManager.getConnection(Query, ID, PWD);
+    Class.forName("org.mariadb.jdbc.Driver");
+    connection = DriverManager.getConnection(DB_URL, DB_USER, DB_PASSWORD);
     if(connection != null){
     	out.println("WebDB 데이터페이스로 연결했습니다. <br>");
     }
