@@ -190,7 +190,6 @@ int totalRowCount = 0;
 
 String ID ="root";
 String PWD ="rVd4DUrcnKSY";
-String PORTNO ="3306";
 String Query ="jdbc:mariadb://localhost:3306/scentmall";
 
 Connection connection = null;
@@ -201,7 +200,7 @@ ResultSet listResultSet = null;
 
 try {
     connection = DriverManager.getConnection(Query, ID, PWD);
-    Class.forName("com.mysql.jdbc.Driver");
+    Class.forName("org.mariadb.jdbc.Driver");
     if(connection != null){
 	out.println("WebDB 데이터페이스로 연결했습니다. <br>");
 }
