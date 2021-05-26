@@ -185,6 +185,9 @@ body > #wrap{
 </head>
 
 <body>
+<!--header 시작-->
+<%@ include file="/header.jsp" %>
+<!--header 끝-->
 	<div id="container">
 		<div id="mainnav">
 		<dl class="category_about_us">
