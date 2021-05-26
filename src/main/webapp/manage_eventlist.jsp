@@ -160,8 +160,8 @@ body > #wrap{
 				</dl>
 			<dl class="Event_Noitce">
 				<dt><a href="#">Event/Notice</a></dt>
-				<dd><a href="ControllerServlet?command=manage_eventlist">Event/Notice List</a></dd>
-				<dd><a href="ControllerServlet?command=manage_eventadd">Event/Notice Register</a></dd>
+				<dd><a href="<%=request.getContextPath()%>/manage_eventlist.jsp">Event/Notice List</a></dd>
+				<dd><a href="<%=request.getContextPath()%>/manage_eventadd.jsp">Event/Notice Register</a></dd>
 			</dl>
 			<dl class="category_shop">
 				<dt><a href="#">Product</a></dt>
