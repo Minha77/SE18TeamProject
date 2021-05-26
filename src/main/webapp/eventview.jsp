@@ -1,10 +1,10 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR" pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=utf8" pageEncoding="utf8"%>
 <%@ page import="java.sql.*" %>
 <!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
-<title>ÀÌº¥Æ® »ó¼¼ Á¤º¸</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf8">
+<title>이벤트 페이지</title>
 <style>
 html, body{
 	width:100%;
@@ -186,13 +186,12 @@ String DB_URL = "jdbc:mariadb://localhost:3306/scentmall";
 String DB_USER = "root";
 String DB_PASSWORD= "rVd4DUrcnKSY";
 
-	Connection conn = DriverManager.getConnection(DB_URL, DB_USER, DB_PASSWORD);
     Connection connection = null;
     PreparedStatement statement = null;
     ResultSet resultSet = null;
     try {
         Class.forName("org.mariadb.jdbc.Driver");
-        connection = DriverManager.getConnection(Query, ID, PWD);
+        connection = DriverManager.getConnection(DB_URL, DB_USER, DB_PASSWORD);
         String sql = "SELECT event_name, event_content, event_startdate, event_enddate, event_banner FROM event_table WHERE event_number=?";
         statement = connection.prepareStatement(sql);
         statement.setInt(1, event_number);
