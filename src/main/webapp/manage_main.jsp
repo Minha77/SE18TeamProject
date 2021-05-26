@@ -165,13 +165,6 @@ body > #wrap{
 <%@ include file="/header.jsp" %>
 <!--header 끝-->
 
-	<div id="header">
-		<h1 class="logo"><a href="index.jsp"><img src="img/logo.png"/></a></h1>	
-		<dl class="topnav">
-			<dd><a href="ControllerServlet?command=logout">logout</a></dd>
-			<dd><a href="manager_login.jsp">manager</a></dd>
-		</dl>
-	</div>
 	
 	<div id="container">
 		<div id="mainnav">
