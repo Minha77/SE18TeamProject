@@ -190,7 +190,6 @@ int totalRowCount = 0;
 
 String ID ="root";
 String PWD ="rVd4DUrcnKSY";
-String PORTNO ="3306";
 String Query ="jdbc:mariadb://localhost:3306/scentmall";
 
 Connection connection = null;
