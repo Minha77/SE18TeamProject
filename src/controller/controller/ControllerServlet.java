@@ -15,7 +15,7 @@ public class ControllerServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		String command = request.getParameter("command");
-		System.out.println("ControllerServletø°º≠ ø‰√ª : " + command);
+		System.out.println("ControllerServletÏóêÏÑú ÏöîÏ≤≠ : " + command);
 		ActionFactory af = ActionFactory.getInstance();
 		Action action = af.getAction(command);
 		if (action != null) {
