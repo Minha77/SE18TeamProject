@@ -72,8 +72,10 @@
 	 </div>
   </div>
   <div align="center">
+  
+  <%if(user_id == null){ %>
   <div class="loginbox" style="float:left;" align="left">
-    <form  name="loginform" action="/login/login_check.php" method="post">
+    <form  name="loginform" action="/login/login_check.jsp" method="post">
       <p>
         <input type="text" name="id" placeholder="아이디" class="edittext"
         onfocus="idcheck();" onblur="idcheck();">
@@ -105,6 +107,10 @@
       <p>
         <button class="btn" type="button" onclick="location.href='/join/agreement.jsp'">회원가입</button>
       </p>
+      
+      <%}else{ %>
+      <%= id %>님 로그인
+      <%} %>
   
 </div>
    
