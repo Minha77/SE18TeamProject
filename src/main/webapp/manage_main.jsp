@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
-<title>Addup Çâ¼ö °ü¸®ÀÚ ÆäÀÌÁö</title>
+<title>Addup í–¥ìˆ˜ ê´€ë¦¬ì í˜ì´ì§€</title>
 <style>
 html, body{
 	width:100%;
@@ -158,8 +158,8 @@ body > #wrap{
 		<div id="mainnav">
 			<dl class="Event_Noitce">
 				<dt><a href="#">Event/Notice</a></dt>
-				<dd><a href="ControllerServlet?command=manage_eventlist">Event/Notice List</a></dd>
-				<dd><a href="ControllerServlet?command=manage_eventadd">Event/Notice Register</a></dd>
+				<dd><a href="<%=request.getContextPath()%>/manage_eventlist.jsp">Event/Notice List</a></dd>
+				<dd><a href="<%=request.getContextPath()%>/namage_eventadd.jsp">Event/Notice Register</a></dd>
 			</dl>
 			<dl class="Category">
 				<dt><a href="#">Product</a></dt>
@@ -175,7 +175,7 @@ body > #wrap{
 		</div>
 		
 		<div id="content">
-			<h1>°ü¸®ÀÚ ¸ŞÀÎ ÆäÀÌÁöÀÔ´Ï´Ù.</h1>
+			<h1>ê´€ë¦¬ì ë©”ì¸ í˜ì´ì§€ì…ë‹ˆë‹¤.</h1>
 		</div>
 	</div>
 	<div id="footer">
