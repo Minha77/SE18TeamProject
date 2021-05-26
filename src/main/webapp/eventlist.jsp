@@ -191,9 +191,7 @@ int totalRowCount = 0;
 String ID ="root";
 String PWD ="rVd4DUrcnKSY";
 String PORTNO ="3306";
-String DBNAME="scentmall";
-String TIMEZONE ="serverTimezone=UTC";
-String Query ="jdbc:mysql://localhost:" + PORTNO +"/" + DBNAME +"?"+TIMEZONE;
+String Query ="jdbc:mariadb://localhost:3306/scentmall";
 
 Connection connection = null;
 PreparedStatement totalStatement = null;
