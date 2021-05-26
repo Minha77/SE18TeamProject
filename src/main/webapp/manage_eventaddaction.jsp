@@ -166,7 +166,7 @@ body > #wrap{
 <%
 
 
-String uploadDir = "/event_img";
+String uploadDir = "/opt/bitnami/tomcat/webapps/ROOT/SE_Project_Team18/src/main/webapp/event_img";
 
 int maxSize = 1024 * 1024 * 100;
 String encoding = "UTF-8";
