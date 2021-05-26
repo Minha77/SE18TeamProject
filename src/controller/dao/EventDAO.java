@@ -15,9 +15,9 @@ public class EventDAO {
     private final String driverClassName = "com.mysql.jdbc.Driver";
     private final String url = "jdbc:mysql://127.0.0.1:3306/injava?useUnicode=true&characterEncoding=euckr";
     private final String username = "root";
-    private final String password = "asdf";
+    private final String password = "rVd4DUrcnKSY";
     
-    // Å×ÀÌºí : board , ±â´É : µ¥ÀÌÅÍ ¼öÁ¤ 
+    // í…Œì´ë¸” : board , ê¸°ëŠ¥ : ë°ì´í„° ìˆ˜ì • 
     public int updateBoard(EventVO evo) {
         int rowCount = 0;
         Connection connection = null;
@@ -40,7 +40,7 @@ public class EventDAO {
         return rowCount;
     }
     
-    // Å×ÀÌºí : board , ±â´É : µ¥ÀÌÅÍ »èÁ¦ 
+    // í…Œì´ë¸” : board , ê¸°ëŠ¥ : ë°ì´í„° ì‚­ì œ 
     public int deleteBoard(EventVO board) {
         int rowCount = 0;
         Connection connection = null;
@@ -59,7 +59,7 @@ public class EventDAO {
         return rowCount;
     }
     
-    // Å×ÀÌºí : board , ±â´É : ÇÏ³ªÀÇ µ¥ÀÌÅÍ °¡Á®¿À±â
+    // í…Œì´ë¸” : board , ê¸°ëŠ¥ : í•˜ë‚˜ì˜ ë°ì´í„° ê°€ì ¸ì˜¤ê¸°
     public EventVO selectBoardByKey(int event_number) {
         EventVO board = null;
         Connection connection = null;
@@ -88,7 +88,7 @@ public class EventDAO {
         return board;
     }
     
-    // Å×ÀÌºí : board , ±â´É : ÇÑ ÆäÀÌÁöÀÇ µ¥ÀÌÅÍ °¡Á®¿À±â 
+    // í…Œì´ë¸” : board , ê¸°ëŠ¥ : í•œ í˜ì´ì§€ì˜ ë°ì´í„° ê°€ì ¸ì˜¤ê¸° 
     public List<EventVO> selectBoardListPerPage(int beginRow, int pagePerRow) {
         List<EventVO> list = new ArrayList<EventVO>();
         Connection connection = null;
@@ -119,7 +119,7 @@ public class EventDAO {
         return list;
     }
     
-    // Å×ÀÌºí : board , ±â´É : ÀüÃ¼ ·Î¿ì Ä«¿îÅÍ °¡Á®¿À±â
+    // í…Œì´ë¸” : board , ê¸°ëŠ¥ : ì „ì²´ ë¡œìš° ì¹´ìš´í„° ê°€ì ¸ì˜¤ê¸°
     public int selectTotalBoardCount() {
         int rowCount = 0;
         Connection connection = null;
@@ -141,7 +141,7 @@ public class EventDAO {
         return rowCount;
     }
     
-    // Å×ÀÌºí : board , ±â´É : µ¥ÀÌÅÍ ÀÔ·ÂÇÏ±â
+    // í…Œì´ë¸” : board , ê¸°ëŠ¥ : ë°ì´í„° ì…ë ¥í•˜ê¸°
     public int insertEvent(EventVO evo) {
         int rowCount = 0;
         Connection connection = null;
