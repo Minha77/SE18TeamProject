@@ -28,6 +28,8 @@
     <div class="slide_area" onmouseover="pause();" onmouseout="resume();">    
         
  <%
+ if(result.next())
+ {
         while(result.next())
         {
  %>
@@ -37,6 +39,11 @@
   </div>
  <%
         }
+ }
+ else
+ {
+	 out.println("<p>이벤트가 없습니다.</p>");
+ }
         
     }catch(Exception e) {
         e.printStackTrace();
