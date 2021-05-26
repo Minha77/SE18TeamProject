@@ -41,13 +41,7 @@
     }catch(Exception e) {
         e.printStackTrace();
         out.println("BOARD VIEW ERROR!");
-    } finally {
-        try {result.close();} catch(Exception e){}
-        try {stmt.close();} catch(Exception e){}
-        try {conn.close();} catch(Exception e){}
-    }
-
-        
+    }    
 %>
 </div>
 <script>
