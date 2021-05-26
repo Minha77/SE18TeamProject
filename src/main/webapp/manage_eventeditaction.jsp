@@ -27,18 +27,15 @@ if(request.getParameter("event_number") == null) {
     String event_enddate = request.getParameter("event_enddate");
     System.out.println("manage_eventeditaction param event_enddate :"+event_enddate);
 
-    String ID ="root";
-    String PWD ="asdf";
-    String PORTNO ="3306";
-    String DBNAME="eventdb";
-    String TIMEZONE ="serverTimezone=UTC";
-    String Query ="jdbc:mysql://localhost:" + PORTNO +"/" + DBNAME +"?"+TIMEZONE;
+String DB_URL = "jdbc:mariadb://localhost:3306/scentmall";
+String DB_USER = "root";
+String DB_PASSWORD= "rVd4DUrcnKSY";
 
     Connection connection = null;
     PreparedStatement statement = null;
     try {
-        Class.forName("com.mysql.jdbc.Driver");
-        connection = DriverManager.getConnection(Query, ID, PWD);
+        Class.forName("org.mariadb.jdbc.Driver");
+        connection = DriverManager.getConnection(DB_URL, DB_USER, DB_PASSWORD);
         String selectSql = "UPDATE eventdb.event_table SET event_name=?, event_content=?, event_startdate=?, event_enddate=? WHERE event_number=?";
         statement = connection.prepareStatement(selectSql);
         statement.setString(1, event_name);
