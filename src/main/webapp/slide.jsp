@@ -28,8 +28,14 @@
     <div class="slide_area" onmouseover="pause();" onmouseout="resume();">    
         
  <%
+ 
+ int count = 0;
+ 
  if(result.next())
- {
+ {      result.last();
+ 		count = result.getRow();
+ 		result.beforeFirst();
+ 		
         while(result.next())
         {
  %>
@@ -39,6 +45,22 @@
   </div>
  <%
         }
+  
+%>
+  <a class="prev" onclick="minusSlides()">&#10094;</a>
+  <a class="next" onclick="plusSlides()">&#10095;</a>
+  
+  <div class="dots" style="text-align:center;">
+  <%
+	while(0 <= count--)
+	{
+  %>
+  			
+  <span class="dot" onclick="currentSlide(<%=count%>)"></span>
+  <%}%>
+  </div>
+  <%
+  
  }
  else
  {
@@ -48,8 +70,10 @@
     }catch(Exception e) {
         e.printStackTrace();
         out.println("BOARD VIEW ERROR!");
-    }    
-%>
+    }   
+  %>
+  
+  
 </div>
 <script>
 
