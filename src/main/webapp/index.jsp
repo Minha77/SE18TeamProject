@@ -18,7 +18,7 @@ html, body{
 #wrap{
 	width:1400px;
 	height:100%;
-	margin:0px auto;
+	margin-top:300px;
 }
 body > #wrap{
 	height:auto;

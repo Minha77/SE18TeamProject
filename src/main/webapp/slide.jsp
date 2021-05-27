@@ -39,7 +39,7 @@
         while(result.next())
         {
  %>
-        	<div class="mySlides fade" style="display:none;">
+        	<div class="mySlides" style="display:none;">
         	<a href="/eventview.jsp?event_number=<%=result.getString("event_number")%>">
     <img src="/event_img/<%=result.getString("event_banner")%>" style="width:100%; height:300px"></a>
   </div>
